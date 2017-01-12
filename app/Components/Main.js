@@ -4,7 +4,7 @@ var React = require("react");
 // Here we include all of the sub-components
 var Form = require("./children/Form");
 var Results = require("./children/Results");
-
+var History = require("./children/Search");
 // Helper Function
 var helpers = require("./utils/helpers");
 
@@ -61,6 +61,14 @@ var Main = React.createClass({
 
           </div>
         </div>
+
+      <div className="row">
+          <div className="col-md-12">
+            <History address={this.setTerm} />
+            <History address={this.state.results} />
+          </div>
+        </div>
+
       </div>
     );
   }
